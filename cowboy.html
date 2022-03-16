@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>cowboy</title>
+    <style>
+
+        @font-face {
+            font-family: 'YiSunShinRegular';
+            src:url(fonts/YiSunShinRegular.ttf);}
+
+        body {
+            background-color: black;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: center; }
+
+        .m-font {
+            font-family: 'YiSunShinRegular'; 
+            font-size: 15pt;
+            color: white;
+            line-height: 1.5;
+            font-weight: lighter;}
+
+        h2 {
+            font-size: 28pt;
+            font-weight: lighter;}
+        
+        #dialogue {
+            font-size: 15pt;
+            color: steelblue;
+            padding-bottom: 100px;}
+
+        li {
+            list-style: none;
+            line-height: 2;
+            text-align: right;
+            }
+
+        #cowboy img {
+            height: 400px;
+            position: relative;
+            right: 300px;}
+
+
+
+        .stats {
+            position: relative;
+           right: 830px;}  
+
+        
+        
+        .gage {
+            width: 200px;
+            height: 15px;
+            background-color: lightsteelblue;
+            display: inline-block;
+            position: relative;
+            left: 15px;
+            border-radius: 5px;
+        }
+
+        .decoding-stat {
+            height: 15px;
+            width: 100px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: decoding-stat;
+        }
+
+        .survive-stat {
+            height: 15px;
+            width: 160px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: survive-stat;
+        }
+
+        .suport-stat {
+            height: 15px;
+            width: 160px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: suport-stat;
+        }
+
+        @keyframes decoding-stat {
+            from{width: 1px;}
+            to{width: 100px; }
+            }
+
+        @keyframes survive-stat {
+            from{width: 1px;}
+            to{width: 160px;}
+            }
+        @keyframes suport-stat{
+            from{width: 1px;}
+            to{width: 160px;}
+        }
+        
+        .passive li{
+            position: relative;
+            left: -640px;
+            top: -580px;
+            line-height: 6;
+           }
+
+        .passive-exp li {
+            font-size: 10pt;
+            text-align: left;
+            position: relative;}
+
+        .passive1 {
+            top: -1075px;
+            left: 675px;   
+        }
+
+        .passive2 {
+            top: -1015px;
+            left: 675px;   
+        }
+
+        .passive3 {
+            top: -930px;
+            left: 675px;   
+        }
+
+        .passive4 {
+            top: -890px;
+            left: 675px;   
+        }
+
+        .bottom-padding {padding-bottom: 40px;}
+
+    </style>
+</head>
+<body class="m-font">
+    <h2>카우보이<br><small>케빈 아수소</small></h2>
+    <div id="dialogue" >
+        <p>아메리카 대륙에서 온 모험을 좋아하는 카우보이<br>
+        <b>그는 예전에 신비한 인디언 부족과 같이 생활하면서 이 놀라운 올가미 기예를 익혔습니다.</b></p>
+    </div>
+
+    <div id="cowboy">
+            <img src="image/expansion-cowboy.png">
+            <div class="stats">
+                <ul id="stat">
+                    <li>해독 속도 <div class="gage"><div class="decoding-stat"></div></div>
+                    <li>생존 능력 <div class="gage"><div class="survive-stat"></div></div>
+                    <li>서포트 능력 <div class="gage"><div class="suport-stat"></div></div>
+                </ul>
+            </div>
+    </div>
+            <div>
+                <ul class="passive">
+                    <li class="bottom-padding">올가미 기예
+                    <li>말 위의 영웅
+                    <li>산만함
+                    <li>보호본능
+                </ul>
+                <ul class="passive-exp">
+                    <li class="passive1">카우보이는 버튼을 터치하거나 길게 눌러 지정한 방향으로 올가미를 던질 수 있으며,<br> 스킬 버튼을 길게 눌렀을 때는 목표를 선택해 조준할 수 있습니다. <br>올가미가 동료에게 적중하면, 동료를 끌어와 자신의 등에 묶으며, 기운을 얻어 일정 시간 동안 빨라집니다.<br>
+                        만약 올가미가 감시자에게 적중하면, 감시자의 머리 위를 뛰어넘어 감시자 기준 반대편 위치로 이동합니다.
+                    <li class="passive2">말을 탄 영웅은 용감하고 강력합니다. 카우보이에 의해 기절당한 감시자의 기절 회복 속도가 20%만큼 느려집니다.
+                    <li class="passive3">카우보이는 자유분방하고 산만해 복잡한 기계를 만지는 걸 좋아하지 않습니다. 암호 해독 속도가 10%만큼 감소합니다.<br>하지만 카우보이는 여성 캐릭터와 함께 암호를 해독할 때는 여성에게 잘 보이기 위해 암호 해독 속도가 10%큼 증가합니다. <br>
+                        남성 캐릭터와 함께 해독할 때는 한층 더 게을러져 암호 해독 속도가 30%만큼 감소합니다.
+                    <li class="passive4">여성에 대한 보호본능이 넘칩니다.<br> 여성 캐릭터를 등에 업은 채로 감시자에게 공격 당할 시, 카우보이가 2회의 피해를 입고 동료는 피해를 입지 않습니다.<br>남성 캐릭터를 등에 업은 채로 감시자에게 공격 당할 시, 두 명이 각각 1회의 피해를 입습니다.
+
+                </ul>
+            </div>
+    
+</body>
+</html>

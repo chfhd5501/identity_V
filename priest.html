@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>priest</title>
+    <style>
+
+        @font-face {
+            font-family: 'YiSunShinRegular';
+            src:url(fonts/YiSunShinRegular.ttf);}
+
+        body {
+            background-color: black;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: center; }
+
+        .m-font {
+            font-family: 'YiSunShinRegular'; 
+            font-size: 15pt;
+            color: white;
+            line-height: 1.5;
+            font-weight: lighter;}
+
+        h2 {
+            font-size: 28pt;
+            font-weight: lighter;}
+        
+        #dialogue {
+            font-size: 15pt;
+            color: steelblue;
+            padding-bottom: 100px;}
+
+        li {
+            list-style: none;
+            line-height: 2;
+            text-align: right;
+            }
+
+        #priest img {
+            height: 400px;
+            position: relative;
+            right: 300px;}
+
+
+
+        .stats {
+            position: relative;
+           right: 830px;}  
+
+        
+        
+        .gage {
+            width: 200px;
+            height: 15px;
+            background-color: lightsteelblue;
+            display: inline-block;
+            position: relative;
+            left: 15px;
+            border-radius: 5px;
+        }
+
+        .decoding-stat {
+            height: 15px;
+            width: 100px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: decoding-stat;
+        }
+
+        .survive-stat {
+            height: 15px;
+            width: 160px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: survive-stat;
+        }
+
+        .suport-stat {
+            height: 15px;
+            width: 180px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: suport-stat;
+        }
+
+        @keyframes decoding-stat {
+            from{width: 1px;}
+            to{width: 100px; }
+            }
+
+        @keyframes survive-stat {
+            from{width: 1px;}
+            to{width: 160px;}
+            }
+        @keyframes suport-stat{
+            from{width: 1px;}
+            to{width: 180px;}
+        }
+        
+        .passive li{
+            position: relative;
+            left: -680px;
+            top: -580px;
+            line-height: 6;
+           }
+
+        .passive-exp li {
+            font-size: 10pt;
+            text-align: left;
+            position: relative;}
+
+        .passive1 {
+            top: -1115px;
+            left: 655px;   
+        }
+
+        .passive2 {
+            top: -1070px;
+            left: 655px;   
+        }
+
+        .passive3 {
+            top: -980px;
+            left: 655px;   
+        }
+
+        .passive4 {
+            top: -910px;
+            left: 655px;   
+        }
+
+        .bottom-padding {padding-bottom: 80px;}
+    </style>
+</head>
+<body class="m-font">
+    <h2>샤먼<br><small>피오나 길먼</small></h2>
+    <div id="dialogue" >
+        <p>피오나 길먼은 신비주의자입니다. <br>
+        <b>신명께서 자신을 이 장원으로 이끌었다고 말하지만, 그녀의 말을 믿는 사람은 아무도 없습니다.</b></p>
+    </div>
+
+    <div id="priest">
+            <img src="image/expansion-priest.png">
+            <div class="stats">
+                <ul id="stat">
+                    <li>해독 속도 <div class="gage"><div class="decoding-stat"></div></div>
+                    <li>생존 능력 <div class="gage"><div class="survive-stat"></div></div>
+                    <li>서포트 능력 <div class="gage"><div class="suport-stat"></div></div>
+                </ul>
+            </div>
+    </div>
+            <div>
+                <ul class="passive">
+                    <li class="bottom-padding">열쇠
+                    <li>허약함
+                    <li>유심
+                    <li>가호
+                </ul>
+                <ul class="passive-exp">
+                    <li class="passive1">샤먼은 성물의 열쇠를 지니고 있습니다. 버튼을 터치하면 선택한 위치에 직선 통로가 생깁니다.<br> 직선 통로는 감시자도 통과할 수 있으며 통과한 후 3초동안 기절하는 동시에 그 포탈은 파괴됩니다. <br>
+                        버튼을 길게 누르면 몇초간 지속되는 샤먼의 부름을 발동되는데, 이에 동료가 응답하면 두 사람 사이로 긴 통로가 만들어집니다.<br>
+                        다른 생존자들은 긴 통로를 통과할 때 통로의 길이에 따라 입구쪽에 일정 시간동안 지속되는 잔상을 남깁니다.<br>
+                         감시자는 잔상을 공격할 수 있으며, 잔상이 받은 피해와 특수효과는 그대로 생존자에게 전달됩니다.<br> 감시자는 긴 통로를 통과할 수 없습니다.
+                    <li class="passive2">허약한 몸이라 체력이 부족합니다. 판자와 창틀 관련 모션 속도가 10%만큼 감소합니다.
+                    <li class="passive3">과학의 산물 사용에 익숙치 않아, 암호 장치를 해독하는 속도가 10%만큼 감소합니다. <br>암호 해독 시 교정 발생 확률과 교정 난이도가 30%만큼 증가합니다.
+                    <li class="passive4">샤먼은 성물의 열쇠를 영원히 수호할 것을 맹세했습니다. 이 때문에 다른 아이템은 소지할 수 없습니다. <br>신앙의 가호로 동료를 치료하는 데 걸리는 시간이 10%만큼 감소하며, 샤먼이 치료되는 데 걸리는 시간이 30%만큼 감소합니다.
+
+                </ul>
+            </div>
+    
+</body>
+</html>

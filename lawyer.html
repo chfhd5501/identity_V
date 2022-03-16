@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>lawyer</title>
+    <style>
+
+        @font-face {
+            font-family: 'YiSunShinRegular';
+            src:url(fonts/YiSunShinRegular.ttf);}
+
+        body {
+            background-color: black;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: center; }
+
+        .m-font {
+            font-family: 'YiSunShinRegular'; 
+            font-size: 15pt;
+            color: white;
+            line-height: 1.5;
+            font-weight: lighter;}
+
+        h2 {
+            font-size: 28pt;
+            font-weight: lighter;}
+        
+        #dialogue {
+            font-size: 15pt;
+            color: steelblue;
+            padding-bottom: 100px;}
+
+        li {
+            list-style: none;
+            line-height: 2;
+            text-align: right;
+            }
+
+        #lawyer img {
+            height: 400px;
+            position: relative;
+            right: 300px;}
+
+
+
+        .stats {
+            position: relative;
+           right: 830px;}  
+
+        
+        
+        .gage {
+            width: 200px;
+            height: 15px;
+            background-color: lightsteelblue;
+            display: inline-block;
+            position: relative;
+            left: 15px;
+            border-radius: 5px;
+        }
+
+        .decoding-stat {
+            height: 15px;
+            width: 140px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: decoding-stat;
+        }
+
+        .survive-stat {
+            height: 15px;
+            width: 160px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: survive-stat;
+        }
+
+        .suport-stat {
+            height: 15px;
+            width: 140px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: suport-stat;
+        }
+
+        @keyframes decoding-stat {
+            from{width: 1px;}
+            to{width: 140px; }
+            }
+
+        @keyframes survive-stat {
+            from{width: 1px;}
+            to{width: 160px;}
+            }
+        @keyframes suport-stat{
+            from{width: 1px;}
+            to{width: 140px;}
+        }
+        
+        .passive li{
+            position: relative;
+            left: -640px;
+            top: -580px;
+            line-height: 4.5;
+           }
+
+        .passive-exp li {
+            font-size: 10pt;
+            text-align: left;
+            position: relative;}
+
+        .passive1 {
+            top: -930px;
+            left: 685px;   
+        }
+
+        .passive2 {
+            top: -865px;
+            left: 685px;   
+        }
+
+        .passive3 {
+            top: -805px;
+            left: 685px;   
+        }
+
+        .passive4 {
+            top: -740px;
+            left: 685px;   
+        }
+
+
+    </style>
+</head>
+<body class="m-font">
+    <h2>변호사<br><small>프레디 라일리</small></h2>
+    <div id="dialogue" >
+        <p>그 소송에서 지위도 명예도 잃고 무너져 버렸지만, <br>
+            프레디는 여전히 '법의 목적은 어떤 일을 허가하는 것이 아닌, 하면 안 되는 일을 명시하는데 있다.'고 믿습니다. <br> 
+        <b>하지만 이제 와서 하지 못할 일이 뭐가 남았을까요?</b></p>
+    </div>
+
+    <div id="lawyer">
+            <img src="image/expansion-lawyer.png">
+            <div class="stats">
+                <ul id="stat">
+                    <li>해독 속도 <div class="gage"><div class="decoding-stat"></div></div>
+                    <li>생존 능력 <div class="gage"><div class="survive-stat"></div></div>
+                    <li>서포트 능력 <div class="gage"><div class="suport-stat"></div></div>
+                </ul>
+            </div>
+    </div>
+            <div>
+                <ul class="passive">
+                    <li>주도면밀
+                    <li>차갑게 식은 마음
+                    <li>상류층
+                    <li>단골손님
+                </ul>
+                <ul class="passive-exp">
+                    <li class="passive1">소지한 지도로 해독되지 않은 암호 장치와 탈출구, 생존자, 감시자의 위치를 찾을 수 있습니다.
+                    <li class="passive2">변호사의 피에는 거짓말이 흐르고 있어서, 어떠한 모션 중에도 공포의 일격에 당하지 않습니다.
+                    <li class="passive3">변호사는 귀하게 자라 체력이 약합니다. 판자 및 창틀 관련 모션 속도가 10%만큼 감소합니다.
+                    <li class="passive4">게임에 참여한 경험이 있는 베테랑입니다. <br>공격을 당한 후에 신인들보다 한층 더 경각심을 갖습니다.<br>피해를 입은 후에 빨라지는 시간이 2초만큼 증가합니다.
+
+                </ul>
+            </div>
+    
+</body>
+</html>

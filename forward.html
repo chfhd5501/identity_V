@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>forward</title>
+    <style>
+
+        @font-face {
+            font-family: 'YiSunShinRegular';
+            src:url(fonts/YiSunShinRegular.ttf);}
+
+        body {
+            background-color: black;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: center; }
+
+        .m-font {
+            font-family: 'YiSunShinRegular'; 
+            font-size: 15pt;
+            color: white;
+            line-height: 1.5;
+            font-weight: lighter;}
+
+        h2 {
+            font-size: 28pt;
+            font-weight: lighter;}
+        
+        #dialogue {
+            font-size: 15pt;
+            color: steelblue;
+            padding-bottom: 100px;}
+
+        li {
+            list-style: none;
+            line-height: 2;
+            text-align: right;
+            }
+
+        #forward img {
+            height: 400px;
+            position: relative;
+            right: 300px;}
+
+
+
+        .stats {
+            position: relative;
+           right: 830px;}  
+
+        
+        
+        .gage {
+            width: 200px;
+            height: 15px;
+            background-color: lightsteelblue;
+            display: inline-block;
+            position: relative;
+            left: 15px;
+            border-radius: 5px;
+        }
+
+        .decoding-stat {
+            height: 15px;
+            width: 60px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: decoding-stat;
+        }
+
+        .survive-stat {
+            height: 15px;
+            width: 180px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: survive-stat;
+        }
+
+        .suport-stat {
+            height: 15px;
+            width: 200px;
+            background-color: steelblue;
+            border-radius: 5px;
+            animation-duration:2s;
+            animation-name: suport-stat;
+        }
+
+        @keyframes decoding-stat {
+            from{width: 1px;}
+            to{width: 60px; }
+            }
+
+        @keyframes survive-stat {
+            from{width: 1px;}
+            to{width: 180px;}
+            }
+        @keyframes suport-stat{
+            from{width: 1px;}
+            to{width: 200px;}
+        }
+        
+        .passive li{
+            position: relative;
+            left: -640px;
+            top: -580px;
+            line-height: 5;
+           }
+
+        .passive-exp li {
+            font-size: 10pt;
+            text-align: left;
+            position: relative;}
+
+        .passive1 {
+            top: -965px;
+            left: 675px;   
+        }
+
+        .passive2 {
+            top: -945px;
+            left: 675px;   
+        }
+
+        .passive3 {
+            top: -920px;
+            left: 675px;   
+        }
+
+        .passive4 {
+            top: -850px;
+            left: 675px;   
+        }
+
+        .bottom-padding {padding-bottom: 80px;}
+    </style>
+</head>
+<body class="m-font">
+    <h2>포워드<br><small>윌리엄 엘리스</small></h2>
+    <div id="dialogue" >
+        <p>럭비는 점점 인기를 얻고 있지만, 정작 이 신흥 스포츠의 창시자라고 주장하는 윌리엄 엘리스는 사람들에게서 잊혀가고 있습니다. <br>
+        <b>올레투스 장원의 주인이 무언가 도움을 줄 수 있지 않을까요?</b></p>
+    </div>
+
+    <div id="forward">
+            <img src="image/expansion-forward.png">
+            <div class="stats">
+                <ul id="stat">
+                    <li>해독 속도 <div class="gage"><div class="decoding-stat"></div></div>
+                    <li>생존 능력 <div class="gage"><div class="survive-stat"></div></div>
+                    <li>서포트 능력 <div class="gage"><div class="suport-stat"></div></div>
+                </ul>
+            </div>
+    </div>
+            <div>
+                <ul class="passive">
+                    <li>럭비선수
+                    <li>운동소질
+                    <li>기계치
+                    <li>강렬한 몸부림
+                </ul>
+                <ul class="passive-exp">
+                    <li class="passive1">럭비공을 소지합니다. 럭비공을 사용할 시 공을 끌어안고 전방으로 빠르게 돌진하며, 힘이 다 떨어지면 기절합니다.  <br>
+                        강인한 신체를 가진 포워드는 일정 거리를 달린 후에 감시자를 튕겨낼 수 있게 되며, <br>튕겨 나간 감시자가 다른 물체에 부딪히면 긴 시간 동안 기절합니다.         
+                    <li class="passive2">최고의 운동 재능과 엄청난 힘을 갖고 있습니다.<br>판자와 창틀을 뛰어넘는 속도가 20%만큼 증가하고, 판자를 쓰러뜨리는 속도가 50%만큼 증가합니다.<br>
+                         그가 쓰러뜨린 판자에 부딪혀 기절한 감시자의 기절 회복 속도가 15%만큼 느려집니다.
+                    <li class="passive3">손재주가 없어 기계를 다루는 데 서툽니다. 암호 해독 속도가 30%만큼 감소합니다.
+                    <li class="passive4">뛰어난 신체 능력으로 풍선에 묶인 상태에서 더 쉽게 벗어납니다. <br>몸부림 치는 속도가 10%만큼 증가합니다.
+
+                </ul>
+            </div>
+    
+</body>
+</html>

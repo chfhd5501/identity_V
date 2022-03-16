@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>perfume</title>
+    <style>
+
+        @font-face {
+            font-family: 'YiSunShinRegular';
+            src:url(fonts/YiSunShinRegular.ttf);}
+
+        body {
+            background-color: black;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: center; }
+
+        .m-font {
+            font-family: 'YiSunShinRegular'; 
+            font-size: 15pt;
+            color: white;
+            line-height: 1.5;
+            font-weight: lighter;}
+
+        h2 {
+            font-size: 28pt;
+            font-weight: lighter;}
+        
+        #dialogue {
+            font-size: 15pt;
+            color: steelblue;
+            padding-bottom: 100px;}
+
+        li {
+            list-style: none;
+            line-height: 2;
+            text-align: right;
+            }
+
+        #perfume img {
+            height: 400px;
+            position: relative;
+            right: 300px;}
+
+
+
+        .stats {
+            position: relative;
+           right: 830px;}  
+
+        
+        
+        .gage {
+            width: 200px;
+            height: 15px;
+            background-color: lightsteelblue;
+            display: inline-block;
+            position: relative;
+            left: 15px;
+            border-radius: 5px;
+        }
+
+        .decoding-stat {
+            height: 15px;
+            width: 120px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: decoding-stat;
+        }
+
+        .survive-stat {
+            height: 15px;
+            width: 180px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: survive-stat;
+        }
+
+        .suport-stat {
+            height: 15px;
+            width: 140px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: suport-stat;
+        }
+
+        @keyframes decoding-stat {
+            from{width: 1px;}
+            to{width: 120px; }
+            }
+
+        @keyframes survive-stat {
+            from{width: 1px;}
+            to{width: 180px;}
+            }
+        @keyframes suport-stat{
+            from{width: 1px;}
+            to{width: 140px;}
+        }
+        
+        .passive li{
+            position: relative;
+            left: -660px;
+            top: -580px;
+            line-height: 5;
+           }
+
+        .passive-exp li {
+            font-size: 10pt;
+            text-align: left;
+            position: relative;}
+
+        .passive1 {
+            top: -865px;
+            left: 665px;   
+        }
+
+        .passive2 {
+            top: -820px;
+            left: 665px;   
+        }
+
+        .passive3 {
+            top: -770px;
+            left: 665px;   
+        }
+
+
+    </style>
+</head>
+<body class="m-font">
+    <h2>조향사<br><small>베라 나이르</small></h2>
+    <div id="dialogue" >
+        <p>암시장에서 구한 신비로운 향수 레시피에서 영감을 얻어 자신 만의 '망각의 향수'를 만들어 냈습니다. <br>
+        <b>하지만 그 향수도 여전히 완벽하다고 할 수 없었기에 레시피의 발원지를 찾아 장원에 오게 되었습니다.</b></p>
+    </div>
+
+    <div id="perfume">
+            <img src="image/expansion-perfume.png">
+            <div class="stats">
+                <ul id="stat">
+                    <li>해독 속도 <div class="gage"><div class="decoding-stat"></div></div>
+                    <li>생존 능력 <div class="gage"><div class="survive-stat"></div></div>
+                    <li>서포트 능력 <div class="gage"><div class="suport-stat"></div></div>
+                </ul>
+            </div>
+    </div>
+            <div>
+                <ul class="passive">
+                    <li>망각의 향
+                    <li>기억상실
+                    <li>예민한 후각
+                </ul>
+                <ul class="passive-exp">
+                    <li class="passive1">조향사는 '망각의 향'을 뿌려서 몰입 상태가 되어 현재 자신의 상태와 위치를 기록할 수 있습니다.<br> 기술의 지속 시간 동안, 조향사는 그 사이 벌어진 일들을 잊고 기록할 당시의 상태와 위치로 돌아갈 수 있습니다. 
+                    <li class="passive2">조향사는 망각의 향을 자주 사용해, 기억 상실 증상을 겪고 있습니다. <br>해독 중 발생한 교정에 실패할 때 해독 로직을 잊어버려 후퇴하는 해독 진도가 일반 생존자의 3배로 늘어납니다.
+                    <li class="passive3">조향사는 냄새에 민감해, 의료 도구에서 풍기는 냄새를 싫어합니다. 치료에 필요한 시간이 30%만큼 증가합니다.
+                </ul>
+            </div>
+    
+</body>
+</html>

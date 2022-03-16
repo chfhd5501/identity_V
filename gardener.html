@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>gardener</title>
+    <style>
+
+        @font-face {
+            font-family: 'YiSunShinRegular';
+            src:url(fonts/YiSunShinRegular.ttf);}
+
+        body {
+            background-color: black;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: center; }
+
+        .m-font {
+            font-family: 'YiSunShinRegular'; 
+            font-size: 15pt;
+            color: white;
+            line-height: 1.5;
+            font-weight: lighter;}
+
+        h2 {
+            font-size: 28pt;
+            font-weight: lighter;}
+        
+        #dialogue {
+            font-size: 15pt;
+            color: steelblue;
+            padding-bottom: 100px;}
+
+        li {
+            list-style: none;
+            line-height: 2;
+            text-align: right;
+            }
+
+        #gardener img {
+            height: 400px;
+            position: relative;
+            right: 300px;}
+
+
+
+        .stats {
+            position: relative;
+           right: 830px;}  
+
+        
+        
+        .gage {
+            width: 200px;
+            height: 15px;
+            background-color: lightsteelblue;
+            display: inline-block;
+            position: relative;
+            left: 15px;
+            border-radius: 5px;
+        }
+
+        .decoding-stat {
+            height: 15px;
+            width: 120px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: decoding-stat;
+        }
+
+        .survive-stat {
+            height: 15px;
+            width: 140px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: survive-stat;
+        }
+
+        .suport-stat {
+            height: 15px;
+            width: 140px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: suport-stat;
+        }
+
+        @keyframes decoding-stat {
+            from{width: 1px;}
+            to{width: 120px;}
+            }
+
+        @keyframes survive-stat {
+            from{width: 1px;}
+            to{width: 140px;}
+            }
+        @keyframes suport-stat{
+            from{width: 1px;}
+            to{width: 140px;}
+        }
+        
+        .passive li{
+            position: relative;
+            left: -670px;
+            top: -580px;
+            line-height: 4.5;
+           }
+
+        .passive-exp li {
+            font-size: 10pt;
+            text-align: left;
+            position: relative;}
+
+        .passive1 {
+            top: -930px;
+            left: 635px;   
+        }
+
+        .passive2 {
+            top: -890px;
+            left: 635px;   
+        }
+
+        .passive3 {
+            top: -855px;
+            left: 635px;   
+        }
+
+        .passive4 {
+            top: -840px;
+            left: 635px;   
+        }
+
+
+    </style>
+</head>
+<body class="m-font">
+    <h2>정원사<br><small>엠마 우즈</small></h2>
+    <div id="dialogue" >
+        <p>그녀의 완벽한 원예 기술은 사랑하는 허수아비 씨만을 위한 것입니다.<br>
+        <b>헤이, 당신만의 이상형을 만들어보는게 어때요? 충분한 돈만 있으면 가능합니다.</b></p>
+    </div>
+
+    <div id="gardener">
+            <img src="image/expansion-gardener.png">
+            <div class="stats">
+                <ul id="stat">
+                    <li>해독 속도 <div class="gage"><div class="decoding-stat"></div></div>
+                    <li>생존 능력 <div class="gage"><div class="survive-stat"></div></div>
+                    <li>서포트 능력 <div class="gage"><div class="suport-stat"></div></div>
+                </ul>
+            </div>
+    </div>
+            <div>
+                <ul class="passive">
+                    <li>장인의 솜씨
+                    <li>수호
+                    <li>안전감
+                    <li>단골손님
+                </ul>
+                <ul class="passive-exp">
+                    <li class="passive1">공구함을 소지하며, 광기의 의자를 파괴할 수 있습니다. 기초 수리 기술로 공구함을 사용해도 소모가 발생하지 않습니다.<br>감시자는 파괴된 광기의 의자를 수리할 수 있습니다.공구함은 매번 사용마다 12초의 쿨타임을 갖습니다.
+                    <li class="passive2">과거의 추억으로부터 정원사는 게임 시작 후 50초 이내에 상해 방지 효과를 얻을 수 있으며,<br> 해당 효과는 감시자에게 공격을 받거나 지속 시간이 지난 후에 사라집니다.
+                    <li class="passive3">광기의 의자의 구조에 대한 익숙함이 공포심을 줄여줍니다.<br>정원사는 광기의 의자 근처에 있을시 창틀과 판자관련 속도가 10%증가하며,<br> 광기의 의자에 묶였을 때 이륙 속도가 10%만큼 감소합니다.
+                    <li class="passive4">게임에 참여한 경험이 있는 베테랑입니다. <br>공격을 당한 후에 신인들보다 한층 더 경각심을 갖습니다.<br>피해를 입은 후에 빨라지는 시간이 2초만큼 증가합니다.
+
+                </ul>
+            </div>
+    
+</body>
+</html>

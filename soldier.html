@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>soldier</title>
+    <style>
+
+        @font-face {
+            font-family: 'YiSunShinRegular';
+            src:url(fonts/YiSunShinRegular.ttf);}
+
+        body {
+            background-color: black;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: center; }
+
+        .m-font {
+            font-family: 'YiSunShinRegular'; 
+            font-size: 15pt;
+            color: white;
+            line-height: 1.5;
+            font-weight: lighter;}
+
+        h2 {
+            font-size: 28pt;
+            font-weight: lighter;}
+        
+        #dialogue {
+            font-size: 15pt;
+            color: steelblue;
+            padding-bottom: 100px;}
+
+        li {
+            list-style: none;
+            line-height: 2;
+            text-align: right;
+            }
+
+        #soldier img {
+            height: 400px;
+            position: relative;
+            right: 300px;}
+
+
+
+        .stats {
+            position: relative;
+           right: 830px;}  
+
+        
+        
+        .gage {
+            width: 200px;
+            height: 15px;
+            background-color: lightsteelblue;
+            display: inline-block;
+            position: relative;
+            left: 15px;
+            border-radius: 5px;
+        }
+
+        .decoding-stat {
+            height: 15px;
+            width: 80px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: decoding-stat;
+        }
+
+        .survive-stat {
+            height: 15px;
+            width: 200px;
+            background-color: steelblue;
+            border-radius: 5px;
+            animation-duration:2s;
+            animation-name: survive-stat;
+        }
+
+        .suport-stat {
+            height: 15px;
+            width: 140px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: suport-stat;
+        }
+
+        @keyframes decoding-stat {
+            from{width: 1px;}
+            to{width: 80px; }
+            }
+
+        @keyframes survive-stat {
+            from{width: 1px;}
+            to{width: 200px;}
+            }
+        @keyframes suport-stat{
+            from{width: 1px;}
+            to{width: 140px;}
+        }
+        
+        .passive li{
+            position: relative;
+            left: -650px;
+            top: -580px;
+            line-height: 5.5;
+           }
+
+        .passive-exp li {
+            font-size: 10pt;
+            text-align: left;
+            position: relative;}
+
+        .passive1 {
+            top: -1025px;
+            left: 665px;   
+        }
+
+        .passive2 {
+            top: -970px;
+            left: 665px;   
+        }
+
+        .passive3 {
+            top: -890px;
+            left: 665px;   
+        }
+
+        .passive4 {
+            top: -850px;
+            left: 665px;   
+        }
+
+        .bottom-padding {padding-bottom: 30px;}
+
+    </style>
+</head>
+<body class="m-font">
+    <h2>용병<br><small>나이브 수베다르</small></h2>
+    <div id="dialogue" >
+        <p>은퇴한 용병인 나이브 수베다르는 총알비 속에서 살아남는 방법을 아주 잘 알고있습니다. <br>
+        <b>이 위험한 게임이 그에게 전장에서와 같은 경험을 시켜줄수 있을까요?</b></p>
+    </div>
+
+    <div id="soldier">
+            <img src="image/expansion-soldier.png">
+            <div class="stats">
+                <ul id="stat">
+                    <li>해독 속도 <div class="gage"><div class="decoding-stat"></div></div>
+                    <li>생존 능력 <div class="gage"><div class="survive-stat"></div></div>
+                    <li>서포트 능력 <div class="gage"><div class="suport-stat"></div></div>
+                </ul>
+            </div>
+    </div>
+            <div>
+                <ul class="passive">
+                    <li>강철의 돌진
+                    <li>오랜 훈련
+                    <li class="bottom-padding">굳은 의지
+                    <li>전쟁후유증
+                </ul>
+                <ul class="passive-exp">
+                    <li class="passive1">강철 팔꿈치 보호대를 소지하며, 벽을 지나치면서 밀치는 힘으로 정면으로 돌진합니다. <br>전문 기술로 인해 팔꿈치 보호대의 내구도 소모량이 감소해 더 많이 사용할 수 있습니다.
+                    <li class="passive2">오랜 기간 군사 훈련을 받아 몸이 민첩합니다. 판자 및 창틀 관련 모션 속도가 10%만큼 증가합니다.
+                    <li class="passive3">전장에서의 경험은 용병의 의지를 굳건하게 만들었습니다. <br>광기의 의자에 묶였을 때 이륙 속도가 30%만큼 느려질 뿐만 아니라 공포치가 증가한지 15초가 지난 뒤에 효과가 발생합니다. <br>
+                        공포치가 한계를 초과 했을 때만 쓰러집니다<br>(즉 부상 상태에서, 일반 공격을 1회 당해도 쓰러지지 않으며, 15초가 지난 후에 쓰러집니다.)
+                    <li class="passive4">전쟁은 용병에게 트라우마를 남겼습니다. 암호 장치의 소음으로부터 공포감을 느껴 암호 해독 속도가 25%만큼 감소합니다. <br>또한 전쟁은 용병에게 아물지 않는 상처를 남겼습니다. <br>
+                        매번 새롭게 피해를 입을 때마다 과거의 상처가 벌어져 치료에 걸리는 시간이 20%씩 증가합니다.  <br>
+                        최대 100%까지 증가합니다.
+
+
+                </ul>
+            </div>
+    
+</body>
+</html>

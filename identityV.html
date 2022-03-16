@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>5인격</title>
+    <style>
+    
+        @font-face {
+            font-family: 'YiSunShinRegular';
+            src:url(fonts/YiSunShinRegular.ttf);}
+
+        body {
+            background-color: black;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: center; }
+
+        .m-font {
+            font-family: 'YiSunShinRegular'; 
+            font-size: 15pt;
+            color: white;
+            line-height: 1.5;}
+
+        #header img {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: 50px;
+            }
+
+        #header {
+            width: 1000px;
+            height: 300px;
+            padding-left: 130px;
+            padding-right: 130px;}
+        
+        .category {
+
+            height: 20px;
+            border:1 gainsboro solid;
+            border-top-left-radius: 20px 30px;
+            border-bottom-right-radius: 20px 30px;
+            }
+        
+        li {
+            list-style: none;
+            display:inline;
+            word-spacing: 70px;}
+        
+        li a {
+            text-decoration: none; 
+            color: gainsboro; }
+        
+        .ani1 {
+            transition-property: color; 
+            transition-duration: 1s;}
+
+        .ani1:hover {color:tomato;}
+
+        h1 {
+            color: #575757;
+            padding-top: 100px;
+            padding-bottom: 100px;}
+
+        .longText {
+            text-decoration: line-through;
+            white-space: pre;}
+
+        .longText2 {white-space: pre;}
+
+        h2 { font-size: 30pt; font-weight: lighter; padding-bottom: 40px;}
+
+        #rule {padding-bottom: 60px;}
+
+        .mark {background-color:tomato;}
+
+        #explain figcaption {
+            width: 580px;
+            height: auto;
+            display: inline-block;
+            font-size: 13pt;
+            line-height: 1.5;
+            padding-left: 30px;
+            text-align: left;
+            position: relative;
+            }
+
+        .decoding { top: -20px;}
+        .exit {top: -30px;}
+        .doggoo {top: -60px;}
+        .bird {top: -40px;}
+        .gam {top: -40px;}
+        .locker {top: -40px;}
+        .windowframe {top: -5px;}
+        .panja {top: -30px;}
+        .chest {top: 40px;}
+
+        #chest-item img {
+            position: relative;
+            width: 80px;
+            right: -90px;
+            top: -50;}
+
+        .ani2 {
+            opacity: 0.6;
+            -webkit-transition-property: opacity;
+            -webkit-transition-duration: 0.7s;}
+        .ani2:hover {opacity: 1;}
+        
+        .mapimg .ani3 {
+            opacity: 0;
+            
+            -webkit-transition-duration: 0.1s;
+            font-size: 1pt;}
+
+        .mapimg li:hover .ani3 {
+            opacity: 1;
+            -webkit-transform: translateY(-150px);
+            font-size: 30pt;}
+
+      
+
+	</style>
+</head>
+<body class="m-font">
+    <div id="header">
+        <audio src="audio/bgm.mp3" autoplay loop></audio>
+        <img src="image/identityV.png" >
+        <nav>
+            <ul>
+                <fieldset class="category">
+                        <li><a href="#content1" class="ani1">EXPLAIN</a>
+                        <li><a href="#content2" class="ani1">CHARACTER</a>
+                        <li><a href="#content3" class="ani1">MAP</a>
+                        <li><a href="#content4" class="ani1">PERSONALITY</a></li>
+                </fieldset>
+            </ul>
+        </nav>
+    </div><br><br><br><br>
+
+    <div id="main">
+        <div id="rule">
+            <h2><span style="font-weight: bold;">" </span>잡히느냐, 도망치느냐<span style="font-weight: bold;"> "</span></h2>
+            <p>생존자는 각 캐릭터의 특성을 잘 활용하여 <span class="mark">감시자를 피해 맵 곳곳에 흩어져 있는 해독기 5개를 돌려 탈출하는 것이 목표</span>이다.<br>
+            팀원들과 힘을 모아 암호 해독기 5개를 돌리면 출입문의 잠금장치를 해제하여 탈출할 수 있다.<br>
+            3명 이상 탈출 시 게임에서 승리하고, 2명 이상 탈출 시 무승부가 되며 그 이하로는 게임에서 패배한다.</p>
+        </div>
+
+        <div id="explain">
+            <h1 id="content1"><span class="longText">                                                </span><span class="longText2">   </span>EXPLAIN<span class="longText2">   </span><span class="longText">                                                 </span></h1>  
+            <figure><abbr title="해독기"><img src="image/decoding.png"></abbr><figcaption class="decoding">암호 해독을 하는 시간은 캐릭터마다 차이가 있으며,해독 작업 중에는 교정이 발생한다.<br>
+                교정 성공 시 해독 진도가 증가하지만 실패 시에는 짧은 스턴과 함께 해독 진도가 감소하며 감시자에게 알림이 간다.
+                해독이 진행될수록 해독기 안테나의 흔들리는 정도가 심해지며<br> 감시자가 이를 보고 찾아올 수 있으므로 생존자들은 이를 유의해야 한다.<br></figcaption></figure><br><br>
+            <figure><abbr title="출입구"><img src="image/exit.png"></abbr><figcaption class="exit">암호 해독기 5개가 다 돌아갔을 시 사이렌 소리가 울리며 생존자에게 출입문의 위치를 잠시동안 보여준다.
+                맵에 존재하는 출입문은 총 2개로, 출입문의 잠금 장치를 해제할 시간이 필요하지만 해독기와는 다르게 교정이 발생하지 않는다.
+                잠금 장치를 해제하면 출입문이 열리고 그대로 탈출이 가능하다.</figcaption></figure><br><br>
+            <figure><abbr title="지하통로"><img src="image/doggoo.png"></abbr><figcaption class="doggoo">암호 해독기 5개를 다 돌리지 않아도 장원을 탈출할 수 있는 방법이 존재한다.<br>
+                <span style="color: tomato; text-decoration: underline;" ><addr title="맵에 살아있는 생존자가 1명일 때만 문이 열린다"> '지하 통로'</span></addr>라고 불리는 이 문은 해독기가 2개 이상 돌아가면 생성된다.</figcaption></figure><br><br>
+            <figure><abbr title="까마귀"><img src="image/bird.png"></abbr><figcaption class="bird">생존자가 오랫동안 아무런 행동을 하지 않을 시 까마귀가 생존자 머리 위를 맴돈다. <br>이 때 범위 안에 있는 감시자에게 알림이 간다.
+                해독, 구출, 치료 등의 행동으로 까마귀를 없앨 수 있다. 또, 맵 곳곳에 까마귀가 존재하며 생존자가 가까이 갈 시 울음소리를 내며 날아간다.</figcaption></figure><br><br>
+            <figure><abbr title="광기의 의자"><img src="image/chair.png"></abbr><figcaption class="chair">감시자에게 맞아 기절 상태가 된 생존자는 풍선에 묶인 뒤 광기의 의자에 앉게 된다.<br> 
+                혼자의 힘으로는 탈출이 불가능하며, 다른 생존자가 구출해줘야만 벗어날 수 있다.<br>의자에 앉은 시점부터 의자 게이지가 점점 차기 시작하며, 
+                의자 게이지가 100%가 되면 생존자는 하늘로 날려보내짐과 동시에 장원에서 실종된다.
+                생존자가 광기의 의자에 앉은 시간이 게이지의 반을 넘겼거나 3번 째로 앉게 되는 경우라면 바로 장원에서 실종 처리가 된다.</figcaption></figure><br><br>
+            <figure><abbr title="지하감옥"><img src="image/gam.png"></abbr><figcaption class="gam">광기의 의자는 도구를 사용하여 망가뜨릴 수 있지만, 지하 감옥에 있는 광기의 의자만은 도구로 부술 수 없다.
+                구조 상 구출이 어렵고 감시자에게 유리한 지형이기 때문에 지하 감옥이 있는 지역에서 감시자를 만나면 지하 감옥으로부터 멀어지는 것이 좋다.</figcaption></figure><br><br>
+            <figure><abbr title="캐비넷"><img src="image/locker.png"></abbr><figcaption class="locker">생존자는 캐비넷을 이용하여 감시자로부터 몸을 숨길 수 있다.
+                단, 감시자에게 들켜 캐비넷에서 강제로 나오게 된다면 풀피라도 바로 풍선에 매달려 광기의 의자에 앉을 수 있게 되므로 주의해서 사용해야 한다.</figcaption></figure><br><br>
+            <figure><abbr title="창틀"><img src="image/windowframe.png"></abbr><figcaption class="windowframe">창틀은 생존자와 감시자 모두 이용할 수 있다.
+                생존자는 감시자에게 추격 당할 시 창틀을 이용해 감시자로부터 거리를 벌릴 수 있다. 구조물이라고 해서 창틀에 너무 가까이 붙어있다가 창틀 반대편에 있는 감시자에게 맞을 수 있으니 항상 일정한 거리를 둬야한다.
+                또, 창틀을 넘는 모션 중 감시자에게 맞는다면 <addr title="생존자는 <정상, 반피, 기절>의 3단계를 거친다.
+공포의 일격은 생존자의 피해량이 2배가 되어 정상에서 바로 기절 상태가 되는 것을 말한다"><span style="color: tomato; text-decoration: underline;" >'공포의 일격'</span></addr>으로 풀피에서 기절상태가 될 수 있으므로 주의해야한다.</figcaption></figure><br><br>
+            <figure><abbr title="판자"><img src="image/panja.png"></abbr><figcaption class="panja">생존자는 판자를 내리거나 내려져 있는 판자를 넘을 수 있다. 감시자와의 거리를 벌릴 때 유용하다.
+                게다가 판자를 내릴 때 감시자가 판자에 맞으면 감시자에게 스턴을 먹일 수 있다. 맵에 판자의 개수는 한정적이므로 효율적으로 사용하는 것이 좋다.
+                판자를 넘는 모션 중 감시자에게 맞는다면 공포의 일격이므로 주의해야 한다.</figcaption></figure><br><br>
+            <figure><abbr title="상자"><img src="image/chest.png"></abbr><figcaption class="chest">맵 곳곳에는 아이템이 들어있는 상자가 존재한다. 행운아를 제외한 생존자들은 상자 속 아이템을 랜덤하게 얻는다.
+            얻는 것과 별개로 상자 속 아이템을 사용할 수 있는 캐릭터들은 한정되어 있다.<br><div id="chest-item">
+                <abbr title="진정제
+자신을 치료할 수 있다."><img src="image/ju.png"></abbr><abbr title="신호총
+감시자가 사정거리 안에 들어오면 아이템 버튼이 활성화되고 이를 누르면 감시자를 향해 사격해 스턴을 걸 수 있다."><img src="image/gun.png"></abbr><abbr title="럭비공
+바라보는 방향으로 돌진한다."><img src="image/ball.png"></abbr>
+                <abbr title="공구함
+광기의 의자를 부술 수 있다."><img src="image/09.png"></abbr><abbr title="손전등
+감시자에게 손전등을 비춰 게이지의 절반을 채우면 감시자의 스킬을 잠구고, 게이지를 모두 채우면 감시자에게 스턴을 줌과 동시에 실명시킨다."><img src="image/son.png"></abbr><br><abbr title="아대
+아이템 버튼을 활성화한 상태에서 구조물에 부딪치면 그 반대방향으로 순간 가속한다.
+방향은 컨트롤로 조종할 수 있다."><img src="image/adae.png"></abbr>
+                <abbr title="리모컨
+인형을 소환해서 조종할 수 있다. 감시자가 파괴할 수 있으며, 파괴 시 리모컨의 내구도가 50% 감소한다."><img src="image/meca.png"></abbr><abbr title="여행책
+책을 사용하면 몸이 작아진다."><img src="image/book.png"></abbr><abbr title="지도
+맵 안의 해독기와 생존자의 위치를 실시간으로 확인할 수 있다. 감시자도 윤곽이 비칠 때에는 지도에 표시된다."><img src="image/jido.png"></abbr><abbr title="마술봉
+자신의 분신을 남기고 2초간 은신 상태가 된다. 시간이 지나면 분신은 자동으로 사라진다."><img src="image/stick.png"></abbr></div></figure> </figcaption>   
+         
+        </div>
+
+        <div id="character">
+            <h1 id="content2"><span class="longText">                                              </span><span class="longText2">   </span>CHARACTER<span class="longText2">   </span><span class="longText">                                             </span></h1>
+                <div id="chaimg" style="margin: 5px;">
+                <a href="doctor.html" target="_blank" class="ani2"><img src="image/doctor.png"></a>
+                <a href="thief.html" target="_blank" class="ani2"><img src="image/thief.png"></a>
+                <a href="gardener.html" target="_blank" class="ani2"><img src="image/gardener.png"></a>
+                <a href="lawyer.html" target="_blank" class="ani2"><img src="image/lawyer.png"></a>
+                <a href="luckychild.html" target="_blank" class="ani2"><img src="image/luckychild.png"></a><br>
+                <a href="magic.html" target="_blank" class="ani2"><img src="image/magic.png"></a>
+                <a href="adventurer.html" target="_blank" class="ani2"><img src="image/adventurer.png"></a>
+                <a href="mechanic.html" target="_blank" class="ani2"><img src="image/mechanic.png"></a>
+                <a href="perfume.html" target="_blank" class="ani2"><img src="image/perfume.png"></a>
+                <a href="soldier.html" target="_blank" class="ani2"><img src="image/soldier.png"></a><br>
+                <a href="cowboy.html" target="_blank" class="ani2"><img src="image/cowboy.png"></a>
+                <a href="dancer.html" target="_blank" class="ani2"><img src="image/dancer.png"></a>
+                <a href="priest.html" target="_blank" class="ani2"><img src="image/priest.png"></a>
+                <a href="forward.html" target="_blank" class="ani2"><img src="image/forward.png"></a>
+                </div>
+        </div>
+        
+        <div id="map">
+            <h1 id="content3"><span class="longText">                                                      </span><span class="longText2">   </span>MAP<span class="longText2">   </span><span class="longText">                                                     </span></h1>
+            <ul class="mapimg">
+                <li><a href=""><img src="image/map111.png"><div class="ani3">성심병원</div></a>
+                <li><a href=""><img src="image/map222.png"><div class="ani3">군수공장</div></a>
+                <li><a href=""><img src="image/map333.png"><div class="ani3">붉은성당</div></a>
+                <li><a href=""><img src="image/map444.png"><div class="ani3">호수마을</div></a>
+                <li><a href=""><img src="image/map555.png"><div class="ani3">달빛강공원</div></a></li>
+            </ul>
+        </div>
+
+
+        <div id="personality">
+            <h1 id="content4"><span class="longText">                                            </span><span class="longText2">   </span>PERSONALITY<span class="longText2">   </span><span class="longText">                                           </span></h1>
+            <img src="image/aa.png" usemap="#personality1">
+            <map name="personality1" >
+                    <addr title="호기심
+생존자가 자유롭게 행동하는 상태에서 암호장치를 해독하지 않고 있을 시,
+가장 가까운 곳에 있는 완전히 해독되지 않은 암호 장치의 윤곽이 나타납니다.
+해독되지 않은 암호장치가 3대 남을 시, 모든 해독되지 않은 암호장치의 위치를 보여줍니다. 5초간 지속."><area shape="circle" coords="624,460,30" href="#3-1"></abbr>
+                    <addr title="도주
+탈출구에 전기가 들어오면 이동 속도가 즉시 3%/ 4%/ 5%만큼 증가합니다. 지속 시간 120초."><area shape="circle" coords="727,460,30" href="#3-2"></abbr>
+                    <addr title="새옹지마
+생존자가 암호 장치 해독 중 감전되었을 때, 감시자의 위치를 3/ 5/ 7초 동안 나타냅니다."><area shape="circle" coords="833,460,30" href="#3-3"></abbr>
+                    <addr title="마지막 희망
+탈출구에 전기가 들어오면 즉시 건강한 상태를 회복하며 돌진 속도가 50%만큼 증가합니다. 이 효과는 5초 동안 지속됩니다."><area shape="circle" coords="950,460,34" href="#3-4"></abbr>
+                    <addr title="주의력 분산
+탈출구에 전기가 들어오면 감시자의 위치를 5초 동안 나타냅니다."><area shape="circle" coords="686,374,27" href="#3-1-2"></abbr>
+                    <addr title="죽은 척
+광기의 의자의 카운트다운 속도가 3%/ 6%/ 9%만큼 감소합니다."><area shape="circle" coords="769,283,27" href="#3-1-3"></abbr>
+                    <addr title="눈 가리고 아웅
+암호 장치에 감전되면 100% 확률로 감시자에게 발견되지 않습니다.
+2스탯 적용 시 감전돼도 해독 진도가 깎이지 않으며, 3스탯 적용 시 감전 동작 시간이 절반으로 감소합니다."><area shape="circle" coords="816,366,27" href="#3-1-4"></abbr>
+                    <addr title="소름
+주변 36미터 범위 내의 감시자가 등뒤에서 자신을 바라볼 때 감시자의 방향이 지속적으로 표시됩니다."><area shape="circle" coords="686,546,27" href="#3-1-5"></abbr>
+
+                    <addr title="흔들다리 효과
+주변 18미터 범위 이내에 위치한 생존자의 위치를 나타냅니다."><area shape="circle" coords="518,556,27" href="#6-1"></abbr>
+                    <addr title="구세주 콤플렉스
+생존자를 광기의 의자에서 구출하고 난 뒤 이동속도가 '5/10/15%만큼 증가합니다."><area shape="circle" coords="518,653,27" href="#6-2"></abbr>
+                    <addr title="군중 심리
+다른 생존자가 광기의 의자에 묶여 있는 동안, 광기의 의자 근처 12/18/24미터 범위 이내에서 자신의 이동 속도가 4%/ 6%/ 8%만큼 증가합니다."><area shape="circle" coords="518,747,27" href="#6-3"></abbr>
+                    <addr title="위기 모면
+광기의 의자에서 동료를 성공적으로 구출해낸 뒤, 자신과 해당 동료는 20초 동안 무적 상태가 되어 쓰러지지 않으며 치료를 받을 수 없게 됩니다.
+지속시간 동안 받은 대미지는 무적 상태가 끝나는 순간 전부 적용됩니다.
+구출에 성공한 생존자는 구출 성공 후 이 적성이 다시 발동되지 않습니다."><area shape="circle" coords="518,852,34" href="#6-4"></abbr>
+                    <addr title="살금살금
+다른 생존자가 광기의 의자에 묶여 있는 동안, 광기의 의자 근처 18미터 범위 이내에서 달릴 때 발자국을 남기지 않습니다."><area shape="circle" coords="608,612,28" href="#6-1-2"></abbr>
+                    <addr title="의료인
+자가 치료 또는 타인을 치료하는 속도가 15%/ 20%/ 25%만큼 증가합니다."><area shape="circle" coords="708,691,27" href="#6-1-3"></abbr>
+                    <addr title="피난처
+광기의 의자에서 생존자를 구해낼 때마다 부상의 자가 치료 또는 타인을 치료하는 속도가 10%/ 20%/ 30%만큼 증가합니다.
+이 효과는 중첩이 가능하며 90/ 120/ 150초 간 지속됩니다."><area shape="circle" coords="619,733,27" href="#6-1-4"></abbr>
+                    <addr title="기계 숙달
+암호 해독 도중에 나타나는 교정의 성공 범위가 10%만큼 증가합니다."><area shape="circle" coords="426,611,27" href="#6-1-5"></abbr>
+
+                    <addr title="죽 쑤어 개 주기
+광기의 의자에서 생존자를 구출하는 속도가 40%만큼 증가합니다."><area shape="circle" coords="413,460,26" href="#9-1"></abbr>
+                    <addr title="말파리 효과
+18미터 범위 내에 감시자가 8초 동안있으면 판자 내리는 속도가 8%/ 14%/ 20%만큼 증가합니다."><area shape="circle" coords="311,460,27" href="#9-2"></abbr>
+                    <addr title="무릎 반사
+판자를 뛰어넘은 뒤, 달리기 속도가 30%/ 40%/ 50%만큼 증가합니다. 지속시간 3초, 쿨타임 60/ 50/ 40초."><area shape="circle" coords="204,460,25" href="#9-3"></abbr>
+                    <addr title="깨진 유리창 이론
+창틀을 뛰어넘은 뒤, 달리기 속도가 50%만큼 증가합니다. 지속시간 3초, 쿨타임 40초."><area shape="circle" coords="90,460,32" href="#9-4"></abbr>
+                    <addr title="죄수의 딜레마
+다른 생존자가 풍선에 묶여 있을 때, 감시자와 해당 생존자의 위치를 5초 동안 나타냅니다.
+생존자가 광기의 의자에 묶이면 이 효과는 사라집니다."><area shape="circle" coords="349,541,27" href="#9-1-2"></abbr>
+                    <addr title="생존의지
+풍선에 묶여 있을 때, 몸부림 치는 속도가 10%/ 15%/ 20%만큼 증가합니다."><area shape="circle" coords="222,551,27" href="#9-1-3"></abbr>
+                    <addr title="괴력
+괴력으로 인해 나무 판자를 사용해 감시자를 적중시켰을 때 감시자의 기절 회복 속도가 10%/ 15%/ 20%만큼 감소합니다."><area shape="circle" coords="266,633,27" href="#9-1-4"></abbr>
+                    <addr title="구사일생
+쓰러진 후 자가 치료의 한계치를 돌파하여 스스로 부상 상태로 회복합니다. 한 게임당 회복이 1회 가능합니다."><area shape="circle" coords="351,374,27" href="#9-1-5"></abbr>
+
+                    <addr title="수난
+자신이 광기의 의자에 묶여 있는 동안 다른 생존자들이 서로의 위치를 알 수 있게 됩니다."><area shape="circle" coords="520,363,28" href="#0-1"></abbr>
+                    <addr title="불굴
+쓰러진 상태에서의 자가 치료 속도가 10%/ 15%/ 20%만큼 증가하고, 쓰러진 상태에서의 이동 속도가 100%/ 125%/ 150%만큼 증가합니다."><area shape="circle" coords="520,267,26" href="#0-2"></abbr>
+                    <addr title="공생효과
+광기의 의자에 묶인 생존자가 주변 30미터 내에 있으면, 그 생존자를 향해 달려가는 이동 속도가 2%/ 4%/ 6%만큼 증가합니다."><area shape="circle" coords="520,170,26" href="#0-3"></abbr>
+                    <addr title="방관자
+부상 또는 쓰러진 생존자가 30 미터 내에 있으면 그 생존자를 향해 달려가는 이동 속도가 10%만큼 증가합니다.
+또한 타인을 치료하는 속도가 20%만큼 증가하며, 부상을 입은 생존자를 보여줍니다.
+단, 부상을 입은 생존자가 풍선에 묶이면 보이지 않습니다."><area shape="circle" coords="520,64,34" href="#0-4"></abbr>
+                    <addr title="생존자 본능
+생존자가 1/ 2/ 3명 탈락할 때 자신의 암호 장치 해독 속도가 5%/ 15%/ 30%만큼 증가합니다."><area shape="circle" coords="425,304,27" href="#0-4-2"></abbr>
+                    <addr title="자연 회복
+타인에게 치료받는 시간이 15%/ 20%/ 25%만큼 감소합니다."><area shape="circle" coords="329,226,27" href="#0-4-3"></abbr>
+                    <addr title="구름 속의 산책
+남겨진 발자국의 지속시간이 1/ 1.5/ 2초 감소합니다"><area shape="circle" coords="417,187,27" href="#0-4-4"></abbr>
+                    <addr title="강박증
+주변 16미터 범위 내의 상자의 위치를 나타냅니다."><area shape="circle" coords="610,304,26" href="#0-4-5"></abbr>
+                
+            </map>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

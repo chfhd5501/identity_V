@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>thief</title>
+    <style>
+
+        @font-face {
+            font-family: 'YiSunShinRegular';
+            src:url(fonts/YiSunShinRegular.ttf);}
+
+        body {
+            background-color: black;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: center; }
+
+        .m-font {
+            font-family: 'YiSunShinRegular'; 
+            font-size: 15pt;
+            color: white;
+            line-height: 1.5;
+            font-weight: lighter;}
+
+        h2 {
+            font-size: 28pt;
+            font-weight: lighter;}
+        
+        #dialogue {
+            font-size: 15pt;
+            color: steelblue;
+            padding-bottom: 100px;}
+
+        li {
+            list-style: none;
+            line-height: 2;
+            text-align: right;
+            }
+
+        #thief img {
+            height: 400px;
+            position: relative;
+            right: 300px;}
+
+
+
+        .stats {
+            position: relative;
+           right: 830px;}  
+
+        
+        
+        .gage {
+            width: 200px;
+            height: 15px;
+            background-color: lightsteelblue;
+            display: inline-block;
+            position: relative;
+            left: 15px;
+            border-radius: 5px;
+        }
+
+        .decoding-stat {
+            height: 15px;
+            width: 120px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: decoding-stat;
+        }
+
+        .survive-stat {
+            height: 15px;
+            width: 140px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: survive-stat;
+        }
+
+        .suport-stat {
+            height: 15px;
+            width: 120px;
+            background-color: steelblue;
+            border-radius: 5px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            animation-duration:2s;
+            animation-name: suport-stat;
+        }
+
+        @keyframes decoding-stat {
+            from{width: 1px;}
+            to{width: 120px; }
+            }
+
+        @keyframes survive-stat {
+            from{width: 1px;}
+            to{width: 140px;}
+            }
+        @keyframes suport-stat{
+            from{width: 1px;}
+            to{width: 120px;}
+        }
+        
+        .passive li{
+            position: relative;
+            left: -640px;
+            top: -580px;
+            line-height: 4.5;
+           }
+
+        .passive-exp li {
+            font-size: 10pt;
+            text-align: left;
+            position: relative;}
+
+        .passive1 {
+            top: -930px;
+            left: 675px;   
+        }
+
+        .passive2 {
+            top: -890px;
+            left: 675px;   
+        }
+
+        .passive3 {
+            top: -830px;
+            left: 675px;   
+        }
+
+        .passive4 {
+            top: -790px;
+            left: 675px;   
+        }
+
+
+    </style>
+</head>
+<body class="m-font">
+    <h2>도둑<br><small>크리처 피어슨</small></h2>
+    <div id="dialogue" >
+        <p>화이트샌드가의 고아원을 교회에 맡긴 후에도, 크리처는 사치에 빠지지 않았습니다.<br>
+            그는 생각했습니다. <br>
+            <b>'어쩌면 더 많은 아이들을 도와야 할지도 몰라. 물론, 돈은 다른 사람들의 주머니에서 구해야겠지'</b></p>
+    </div>
+
+    <div id="thief">
+            <img src="image/expansion-thief.png">
+            <div class="stats">
+                <ul id="stat">
+                    <li>해독 속도 <div class="gage"><div class="decoding-stat"></div></div>
+                    <li>생존 능력 <div class="gage"><div class="survive-stat"></div></div>
+                    <li>서포트 능력 <div class="gage"><div class="suport-stat"></div></div>
+                </ul>
+            </div>
+    </div>
+            <div>
+                <ul class="passive">
+                    <li>교활함
+                    <li>민첩한 몸놀림
+                    <li>수집벽
+                    <li>자물쇠 기술
+                </ul>
+                <ul class="passive-exp">
+                    <li class="passive1">손전등을 소지하며, 손전등으로 일정 시간 동안 감시자를 비추면 잠시 동안 행동력을 잃게 할 수 있습니다. <br>충분한 예비용 배터리로 인해 손전등의 사용 가능 시간이 50%만큼 증가합니다.
+                    <li class="passive2">민첩한 몸놀림을 보유하여, 항상 판자와 창틀을 빠르게 넘습니다.
+                    <li class="passive3">오랜 습관을 버리지 못해, 암호를 해독할 때 자주 부품들을 가져갑니다. <br>모든 이의 암호 장치 교정 발동 확률이 10%만큼 증가하며, 교정 성공 범위가 10%만큼 감소합니다.
+                    <li class="passive4">뛰어난 자물쇠 기술을 보유하고 있습니다. <br>이를 어께 너머로 배운 모든 동료의 상자를 여는 속도가 100%만큼 증가합니다.
+
+                </ul>
+            </div>
+    
+</body>
+</html>
